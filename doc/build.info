@@ -1551,6 +1551,14 @@ DEPEND[html/man3/OPENSSL_strcasecmp.html]=man3/OPENSSL_strcasecmp.pod
 GENERATE[html/man3/OPENSSL_strcasecmp.html]=man3/OPENSSL_strcasecmp.pod
 DEPEND[man/man3/OPENSSL_strcasecmp.3]=man3/OPENSSL_strcasecmp.pod
 GENERATE[man/man3/OPENSSL_strcasecmp.3]=man3/OPENSSL_strcasecmp.pod
+DEPEND[html/man3/OSSL_ALGORITHM.html]=man3/OSSL_ALGORITHM.pod
+GENERATE[html/man3/OSSL_ALGORITHM.html]=man3/OSSL_ALGORITHM.pod
+DEPEND[man/man3/OSSL_ALGORITHM.3]=man3/OSSL_ALGORITHM.pod
+GENERATE[man/man3/OSSL_ALGORITHM.3]=man3/OSSL_ALGORITHM.pod
+DEPEND[html/man3/OSSL_CALLBACK.html]=man3/OSSL_CALLBACK.pod
+GENERATE[html/man3/OSSL_CALLBACK.html]=man3/OSSL_CALLBACK.pod
+DEPEND[man/man3/OSSL_CALLBACK.3]=man3/OSSL_CALLBACK.pod
+GENERATE[man/man3/OSSL_CALLBACK.3]=man3/OSSL_CALLBACK.pod
 DEPEND[html/man3/OSSL_CMP_CTX_new.html]=man3/OSSL_CMP_CTX_new.pod
 GENERATE[html/man3/OSSL_CMP_CTX_new.html]=man3/OSSL_CMP_CTX_new.pod
 DEPEND[man/man3/OSSL_CMP_CTX_new.3]=man3/OSSL_CMP_CTX_new.pod
@@ -1631,6 +1639,10 @@ DEPEND[html/man3/OSSL_DECODER_from_bio.html]=man3/OSSL_DECODER_from_bio.pod
 GENERATE[html/man3/OSSL_DECODER_from_bio.html]=man3/OSSL_DECODER_from_bio.pod
 DEPEND[man/man3/OSSL_DECODER_from_bio.3]=man3/OSSL_DECODER_from_bio.pod
 GENERATE[man/man3/OSSL_DECODER_from_bio.3]=man3/OSSL_DECODER_from_bio.pod
+DEPEND[html/man3/OSSL_DISPATCH.html]=man3/OSSL_DISPATCH.pod
+GENERATE[html/man3/OSSL_DISPATCH.html]=man3/OSSL_DISPATCH.pod
+DEPEND[man/man3/OSSL_DISPATCH.3]=man3/OSSL_DISPATCH.pod
+GENERATE[man/man3/OSSL_DISPATCH.3]=man3/OSSL_DISPATCH.pod
 DEPEND[html/man3/OSSL_ENCODER.html]=man3/OSSL_ENCODER.pod
 GENERATE[html/man3/OSSL_ENCODER.html]=man3/OSSL_ENCODER.pod
 DEPEND[man/man3/OSSL_ENCODER.3]=man3/OSSL_ENCODER.pod
@@ -1651,6 +1663,10 @@ DEPEND[html/man3/OSSL_ESS_check_signing_certs.html]=man3/OSSL_ESS_check_signing_
 GENERATE[html/man3/OSSL_ESS_check_signing_certs.html]=man3/OSSL_ESS_check_signing_certs.pod
 DEPEND[man/man3/OSSL_ESS_check_signing_certs.3]=man3/OSSL_ESS_check_signing_certs.pod
 GENERATE[man/man3/OSSL_ESS_check_signing_certs.3]=man3/OSSL_ESS_check_signing_certs.pod
+DEPEND[html/man3/OSSL_HPKE_CTX_new.html]=man3/OSSL_HPKE_CTX_new.pod
+GENERATE[html/man3/OSSL_HPKE_CTX_new.html]=man3/OSSL_HPKE_CTX_new.pod
+DEPEND[man/man3/OSSL_HPKE_CTX_new.3]=man3/OSSL_HPKE_CTX_new.pod
+GENERATE[man/man3/OSSL_HPKE_CTX_new.3]=man3/OSSL_HPKE_CTX_new.pod
 DEPEND[html/man3/OSSL_HTTP_REQ_CTX.html]=man3/OSSL_HTTP_REQ_CTX.pod
 GENERATE[html/man3/OSSL_HTTP_REQ_CTX.html]=man3/OSSL_HTTP_REQ_CTX.pod
 DEPEND[man/man3/OSSL_HTTP_REQ_CTX.3]=man3/OSSL_HTTP_REQ_CTX.pod
@@ -1663,6 +1679,10 @@ DEPEND[html/man3/OSSL_HTTP_transfer.html]=man3/OSSL_HTTP_transfer.pod
 GENERATE[html/man3/OSSL_HTTP_transfer.html]=man3/OSSL_HTTP_transfer.pod
 DEPEND[man/man3/OSSL_HTTP_transfer.3]=man3/OSSL_HTTP_transfer.pod
 GENERATE[man/man3/OSSL_HTTP_transfer.3]=man3/OSSL_HTTP_transfer.pod
+DEPEND[html/man3/OSSL_ITEM.html]=man3/OSSL_ITEM.pod
+GENERATE[html/man3/OSSL_ITEM.html]=man3/OSSL_ITEM.pod
+DEPEND[man/man3/OSSL_ITEM.3]=man3/OSSL_ITEM.pod
+GENERATE[man/man3/OSSL_ITEM.3]=man3/OSSL_ITEM.pod
 DEPEND[html/man3/OSSL_LIB_CTX.html]=man3/OSSL_LIB_CTX.pod
 GENERATE[html/man3/OSSL_LIB_CTX.html]=man3/OSSL_LIB_CTX.pod
 DEPEND[man/man3/OSSL_LIB_CTX.3]=man3/OSSL_LIB_CTX.pod
@@ -3163,6 +3183,8 @@ html/man3/OPENSSL_malloc.html \
 html/man3/OPENSSL_s390xcap.html \
 html/man3/OPENSSL_secure_malloc.html \
 html/man3/OPENSSL_strcasecmp.html \
+html/man3/OSSL_ALGORITHM.html \
+html/man3/OSSL_CALLBACK.html \
 html/man3/OSSL_CMP_CTX_new.html \
 html/man3/OSSL_CMP_HDR_get0_transactionID.html \
 html/man3/OSSL_CMP_ITAV_set0.html \
@@ -3183,14 +3205,17 @@ html/man3/OSSL_DECODER.html \
 html/man3/OSSL_DECODER_CTX.html \
 html/man3/OSSL_DECODER_CTX_new_for_pkey.html \
 html/man3/OSSL_DECODER_from_bio.html \
+html/man3/OSSL_DISPATCH.html \
 html/man3/OSSL_ENCODER.html \
 html/man3/OSSL_ENCODER_CTX.html \
 html/man3/OSSL_ENCODER_CTX_new_for_pkey.html \
 html/man3/OSSL_ENCODER_to_bio.html \
 html/man3/OSSL_ESS_check_signing_certs.html \
+html/man3/OSSL_HPKE_CTX_new.html \
 html/man3/OSSL_HTTP_REQ_CTX.html \
 html/man3/OSSL_HTTP_parse_url.html \
 html/man3/OSSL_HTTP_transfer.html \
+html/man3/OSSL_ITEM.html \
 html/man3/OSSL_LIB_CTX.html \
 html/man3/OSSL_PARAM.html \
 html/man3/OSSL_PARAM_BLD.html \
@@ -3769,6 +3794,8 @@ man/man3/OPENSSL_malloc.3 \
 man/man3/OPENSSL_s390xcap.3 \
 man/man3/OPENSSL_secure_malloc.3 \
 man/man3/OPENSSL_strcasecmp.3 \
+man/man3/OSSL_ALGORITHM.3 \
+man/man3/OSSL_CALLBACK.3 \
 man/man3/OSSL_CMP_CTX_new.3 \
 man/man3/OSSL_CMP_HDR_get0_transactionID.3 \
 man/man3/OSSL_CMP_ITAV_set0.3 \
@@ -3789,14 +3816,17 @@ man/man3/OSSL_DECODER.3 \
 man/man3/OSSL_DECODER_CTX.3 \
 man/man3/OSSL_DECODER_CTX_new_for_pkey.3 \
 man/man3/OSSL_DECODER_from_bio.3 \
+man/man3/OSSL_DISPATCH.3 \
 man/man3/OSSL_ENCODER.3 \
 man/man3/OSSL_ENCODER_CTX.3 \
 man/man3/OSSL_ENCODER_CTX_new_for_pkey.3 \
 man/man3/OSSL_ENCODER_to_bio.3 \
 man/man3/OSSL_ESS_check_signing_certs.3 \
+man/man3/OSSL_HPKE_CTX_new.3 \
 man/man3/OSSL_HTTP_REQ_CTX.3 \
 man/man3/OSSL_HTTP_parse_url.3 \
 man/man3/OSSL_HTTP_transfer.3 \
+man/man3/OSSL_ITEM.3 \
 man/man3/OSSL_LIB_CTX.3 \
 man/man3/OSSL_PARAM.3 \
 man/man3/OSSL_PARAM_BLD.3 \
@@ -4123,6 +4153,10 @@ html/man5/x509v3_config.html
 MANDOCS[man5]=man/man5/config.5 \
 man/man5/fips_config.5 \
 man/man5/x509v3_config.5
+DEPEND[html/man7/EVP_ASYM_CIPHER-RSA.html]=man7/EVP_ASYM_CIPHER-RSA.pod
+GENERATE[html/man7/EVP_ASYM_CIPHER-RSA.html]=man7/EVP_ASYM_CIPHER-RSA.pod
+DEPEND[man/man7/EVP_ASYM_CIPHER-RSA.7]=man7/EVP_ASYM_CIPHER-RSA.pod
+GENERATE[man/man7/EVP_ASYM_CIPHER-RSA.7]=man7/EVP_ASYM_CIPHER-RSA.pod
 DEPEND[html/man7/EVP_ASYM_CIPHER-SM2.html]=man7/EVP_ASYM_CIPHER-SM2.pod
 GENERATE[html/man7/EVP_ASYM_CIPHER-SM2.html]=man7/EVP_ASYM_CIPHER-SM2.pod
 DEPEND[man/man7/EVP_ASYM_CIPHER-SM2.7]=man7/EVP_ASYM_CIPHER-SM2.pod
@@ -4183,6 +4217,10 @@ DEPEND[html/man7/EVP_KDF-HKDF.html]=man7/EVP_KDF-HKDF.pod
 GENERATE[html/man7/EVP_KDF-HKDF.html]=man7/EVP_KDF-HKDF.pod
 DEPEND[man/man7/EVP_KDF-HKDF.7]=man7/EVP_KDF-HKDF.pod
 GENERATE[man/man7/EVP_KDF-HKDF.7]=man7/EVP_KDF-HKDF.pod
+DEPEND[html/man7/EVP_KDF-HMAC-DRBG.html]=man7/EVP_KDF-HMAC-DRBG.pod
+GENERATE[html/man7/EVP_KDF-HMAC-DRBG.html]=man7/EVP_KDF-HMAC-DRBG.pod
+DEPEND[man/man7/EVP_KDF-HMAC-DRBG.7]=man7/EVP_KDF-HMAC-DRBG.pod
+GENERATE[man/man7/EVP_KDF-HMAC-DRBG.7]=man7/EVP_KDF-HMAC-DRBG.pod
 DEPEND[html/man7/EVP_KDF-KB.html]=man7/EVP_KDF-KB.pod
 GENERATE[html/man7/EVP_KDF-KB.html]=man7/EVP_KDF-KB.pod
 DEPEND[man/man7/EVP_KDF-KB.7]=man7/EVP_KDF-KB.pod
@@ -4639,7 +4677,8 @@ man7/img/kdf.png \
 man7/img/mac.png \
 man7/img/pkey.png \
 man7/img/rand.png
-HTMLDOCS[man7]=html/man7/EVP_ASYM_CIPHER-SM2.html \
+HTMLDOCS[man7]=html/man7/EVP_ASYM_CIPHER-RSA.html \
+html/man7/EVP_ASYM_CIPHER-SM2.html \
 html/man7/EVP_CIPHER-AES.html \
 html/man7/EVP_CIPHER-ARIA.html \
 html/man7/EVP_CIPHER-BLOWFISH.html \
@@ -4654,6 +4693,7 @@ html/man7/EVP_CIPHER-RC5.html \
 html/man7/EVP_CIPHER-SEED.html \
 html/man7/EVP_CIPHER-SM4.html \
 html/man7/EVP_KDF-HKDF.html \
+html/man7/EVP_KDF-HMAC-DRBG.html \
 html/man7/EVP_KDF-KB.html \
 html/man7/EVP_KDF-KRB5KDF.html \
 html/man7/EVP_KDF-PBKDF1.html \
@@ -4766,7 +4806,8 @@ html/man7/provider.html \
 html/man7/proxy-certificates.html \
 html/man7/ssl.html \
 html/man7/x509.html
-MANDOCS[man7]=man/man7/EVP_ASYM_CIPHER-SM2.7 \
+MANDOCS[man7]=man/man7/EVP_ASYM_CIPHER-RSA.7 \
+man/man7/EVP_ASYM_CIPHER-SM2.7 \
 man/man7/EVP_CIPHER-AES.7 \
 man/man7/EVP_CIPHER-ARIA.7 \
 man/man7/EVP_CIPHER-BLOWFISH.7 \
@@ -4781,6 +4822,7 @@ man/man7/EVP_CIPHER-RC5.7 \
 man/man7/EVP_CIPHER-SEED.7 \
 man/man7/EVP_CIPHER-SM4.7 \
 man/man7/EVP_KDF-HKDF.7 \
+man/man7/EVP_KDF-HMAC-DRBG.7 \
 man/man7/EVP_KDF-KB.7 \
 man/man7/EVP_KDF-KRB5KDF.7 \
 man/man7/EVP_KDF-PBKDF1.7 \

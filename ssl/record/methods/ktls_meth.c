@@ -147,8 +147,7 @@ static int ktls_int_check_supported_cipher(OSSL_RECORD_LAYER *rl,
      */
 # ifdef OPENSSL_KTLS_AES_CCM_128
     if (EVP_CIPHER_is_a(c, "AES-128-CCM")) {
-        if (rl->version == TLS_1_3_VERSION /* broken on 5.x kernels */
-            || taglen != EVP_CCM_TLS_TAG_LEN)
+        if (taglen != EVP_CCM_TLS_TAG_LEN)
             return 0;
         return 1;
     } else
@@ -334,6 +333,14 @@ static int ktls_set_crypto_state(OSSL_RECORD_LAYER *rl, int level,
 
     if (!BIO_set_ktls(rl->bio, &crypto_info, rl->direction))
         return OSSL_RECORD_RETURN_NON_FATAL_ERR;
+
+    if (rl->direction == OSSL_RECORD_DIRECTION_WRITE &&
+        (rl->options & SSL_OP_ENABLE_KTLS_TX_ZEROCOPY_SENDFILE) != 0)
+        /* Ignore errors. The application opts in to using the zerocopy
+         * optimization. If the running kernel doesn't support it, just
+         * continue without the optimization.
+         */
+        BIO_set_ktls_tx_zerocopy_sendfile(rl->bio);
 
     return OSSL_RECORD_RETURN_SUCCESS;
 }

@@ -10,15 +10,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifndef _WIN32
+#include <openssl/e_os2.h>
+
+#ifdef OPENSSL_SYS_UNIX
 # include <sys/stat.h>
+# include <sys/resource.h>
 # include <openssl/pem.h>
 # include <openssl/x509.h>
 # include <openssl/err.h>
 # include <openssl/bio.h>
-# include <../include/internal/e_os.h>
-# if defined(OPENSSL_SYS_UNIX)
-#  include <sys/resource.h>
+# include "internal/e_os.h"
+
+# ifndef timersub
+/* struct timeval * subtraction; a must be greater than or equal to b */
+#  define timersub(a, b, res)                                         \
+     do {                                                             \
+         (res)->tv_sec = (a)->tv_sec - (b)->tv_sec;                   \
+         if ((a)->tv_usec < (b)->tv_usec) {                           \
+             (res)->tv_usec = (a)->tv_usec + 1000000 - (b)->tv_usec); \
+             --(res)->tv_sec;                                         \
+         } else {                                                     \
+             (res)->tv_usec = (a)->tv_usec - (b)->tv_usec);           \
+         }                                                            \
+     } while(0)
 # endif
 
 static char *prog;
@@ -80,7 +94,7 @@ static void usage(void)
 
 int main(int ac, char **av)
 {
-#ifndef _WIN32
+#ifdef OPENSSL_SYS_UNIX
     int i, debug = 0, count = 100, what = 'c';
     struct stat sb;
     FILE *fp;
@@ -192,7 +206,13 @@ int main(int ac, char **av)
     OPENSSL_free(contents);
     return EXIT_SUCCESS;
 #else
+# if defined(OPENSSL_SYS_WINDOWS)
     fprintf(stderr, "This tool is not supported on Windows\n");
+# elif defined(OPENSSL_SYS_VMS)
+    fprintf(stderr, "This tool is not supported on VMS\n");
+# else
+    fprintf(stderr, "This tool is not supported on this platform\n");
+# endif
     exit(EXIT_FAILURE);
 #endif
 }
